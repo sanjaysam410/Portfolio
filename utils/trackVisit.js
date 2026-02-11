@@ -1,8 +1,7 @@
 import axios from "axios";
 
-// Set tracking endpoint - can be disabled by setting to null
-const TRACKING_ENDPOINT = process.env.NEXT_PUBLIC_TRACKING_ENDPOINT || 
-  "https://portfolio-tracker-475117.el.r.appspot.com/api/track";
+// Set tracking endpoint - can be disabled by setting to null or empty string
+const TRACKING_ENDPOINT = process.env.NEXT_PUBLIC_TRACKING_ENDPOINT?.trim() || null;
 
 // Create axios instance with timeout
 const axiosInstance = axios.create({
@@ -10,14 +9,12 @@ const axiosInstance = axios.create({
 });
 
 export async function trackVisit() {
-  try {
-    // Skip tracking if endpoint not configured
-    if (!TRACKING_ENDPOINT) {
-      console.log("Tracking disabled - no endpoint configured");
-      return;
-    }
+  // Skip tracking if endpoint not configured
+  if (!TRACKING_ENDPOINT) {
+    return; // Silent return when disabled
+  }
 
-    const params = new URLSearchParams(window.location.search);
+  try {
     const encodedRef = params.get("ref") || params.get("track");
     let ref = "unknown";
     if (encodedRef) {
@@ -62,11 +59,23 @@ export async function trackVisit() {
       const res = await axiosInstance.post(TRACKING_ENDPOINT, payload);
       console.log("Tracked successfully", res.data);
     } catch (postErr) {
-      console.error("Tracking error:", {
+      const errorInfo = {
+        type: postErr.name,
         message: postErr.message,
+        code: postErr.code,
         status: postErr.response?.status,
         statusText: postErr.response?.statusText,
-      });
+        responseData: postErr.response?.data,
+      };
+      console.error("Tracking error:", errorInfo);
+      // Log full error for debugging
+      if (postErr.message === "Network Error") {
+        console.error("Network Error - Backend may be unreachable. Check if:", [
+          "1. Backend endpoint is running",
+          "2. CORS is configured on the backend",
+          "3. Your internet connection is stable"
+        ]);
+      }
     }
       
   } catch (err) {
