@@ -1,10 +1,22 @@
 import axios from "axios";
-// const dotev = require("dotenv");
 
-// dotev.config();
+// Set tracking endpoint - can be disabled by setting to null
+const TRACKING_ENDPOINT = process.env.NEXT_PUBLIC_TRACKING_ENDPOINT || 
+  "https://portfolio-tracker-475117.el.r.appspot.com/api/track";
+
+// Create axios instance with timeout
+const axiosInstance = axios.create({
+  timeout: 5000, // 5 second timeout
+});
 
 export async function trackVisit() {
   try {
+    // Skip tracking if endpoint not configured
+    if (!TRACKING_ENDPOINT) {
+      console.log("Tracking disabled - no endpoint configured");
+      return;
+    }
+
     const params = new URLSearchParams(window.location.search);
     const encodedRef = params.get("ref") || params.get("track");
     let ref = "unknown";
@@ -17,11 +29,24 @@ export async function trackVisit() {
       }
     }
     
-    // Get IP and location
-    const ipRes = await axios.get("https://api.ipify.org?format=json");
-    const ip = ipRes.data.ip;
-    const locRes = await axios.get(`https://ipapi.co/${ip}/json/`);
-    const { city, region, country_name } = locRes.data;
+    // Get IP and location with error handling
+    let ip = "unknown";
+    let city = "unknown";
+    let region = "unknown";
+    let country_name = "unknown";
+    
+    try {
+      const ipRes = await axiosInstance.get("https://api.ipify.org?format=json");
+      ip = ipRes.data.ip;
+      
+      const locRes = await axiosInstance.get(`https://ipapi.co/${ip}/json/`);
+      city = locRes.data.city || "unknown";
+      region = locRes.data.region || "unknown";
+      country_name = locRes.data.country_name || "unknown";
+    } catch (locErr) {
+      console.warn("Failed to fetch location data:", locErr.message);
+      // Continue with unknown values
+    }
     
     // Prepare payload
     const payload = {
@@ -33,13 +58,19 @@ export async function trackVisit() {
       ref: ref, 
     };
     
-    await axios
-      .post("https://portfolio-tracker-475117.el.r.appspot.com/api/track", payload)
-      .then((res) => console.log("Tracked successfully", res.data))
-      .catch((err) => console.error("Tracking error", err));
+    try {
+      const res = await axiosInstance.post(TRACKING_ENDPOINT, payload);
+      console.log("Tracked successfully", res.data);
+    } catch (postErr) {
+      console.error("Tracking error:", {
+        message: postErr.message,
+        status: postErr.response?.status,
+        statusText: postErr.response?.statusText,
+      });
+    }
       
   } catch (err) {
-    console.error("Error tracking visit:", err);
+    console.error("Error tracking visit:", err.message);
   }
 }
 export function createTrackedURL(baseURL, recruiterName) {
