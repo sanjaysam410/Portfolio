@@ -34,7 +34,7 @@ const Services = () => {
         transition={{ duration: 0.5, delay: 0.7 }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12 ovo-font"
       >
-        I'm a full-stack developer with a strong interest in Problem Solving, Deep Learning, Cloud Computing, and building scalable applications. My expertise includes working with React, Next.js, Angular, Node.js, and Python, leveraging machine learning to develop solutions like ZeroWaste AI and Conversational Image Chatbots, covering areas like computer vision, natural language processing, and Transformers.
+        I'm a Software Developer and AI Engineer with a strong interest in Generative AI, Agentic RAG, Computer Vision, and building intelligent applications. My expertise includes working with Python, LangGraph, FastAPI, React.js, and Streamlit, leveraging LLMs and multi-agent systems to develop solutions like Telugu Agentic RAG and NatyaBhoda, covering areas like dense vector search, prompt engineering, and pose estimation.
       </motion.p>
       <motion.div
         initial={{ opacity: 0 }}
@@ -44,7 +44,7 @@ const Services = () => {
       >
         {serviceData.map(({ icon, title, description, link }, index) => (
           <motion.div
-            whileHover={{ scale:1.1}}
+            whileHover={{ scale: 1.1 }}
             key={index}
             className="border border-gray-400 rounded-lg px-4 py-8 sm:px-8 sm:py-12 hover:shadow-xl hover:bg-purple-50 hover:-translate-y-1 duration-500 cursor-pointer min-w-[200px]"
           >

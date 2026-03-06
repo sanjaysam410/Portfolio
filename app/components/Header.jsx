@@ -34,7 +34,7 @@ const Header = () => {
         transition={{ duration: 0.8, delay: 0.5 }}
         className="text-3xl sm:text-6xl lg:text-[66px] ovo-font"
       >
-        Full Stack Developer specializing in AI & Cloud Computing
+        Software Developer specializing in Generative AI
       </motion.h1>
       <motion.p
         initial={{ opacity: 0 }}
@@ -42,7 +42,7 @@ const Header = () => {
         transition={{ duration: 0.6, delay: 0.7 }}
         className="max-w-1xl mx-auto ovo-font"
       >
-        Full Stack Developer with specialized expertise in Deep Learning and Cloud Computing, building scalable web applications. Proficient in React, Next.js, Node.js, and Python, with a strong focus on integrating advanced AI and machine learning solutions. Dedicated to creating efficient, innovative software and currently seeking opportunities in Full Stack and AI Engineering.
+        Software Engineer focused on building scalable applications powered by AI. I combine strong programming skills with tools like Python and modern web frameworks to transform complex Generative AI models into useful, production-ready software.
       </motion.p>
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4 w-full max-w-md mx-auto">
         <motion.a

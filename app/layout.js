@@ -3,7 +3,7 @@ import "./globals.css";
 
 const outfit = OutfitFont({
   subsets: ["latin"],
-  weight:["400","500","600","700"]
+  weight: ["400", "500", "600", "700"]
 });
 
 const ovo = OvoFont({
@@ -13,16 +13,16 @@ const ovo = OvoFont({
 
 
 export const metadata = {
-  title: "Sanjay Samala - Full Stack Developer & AI Engineer",
-  description: "Full Stack Developer specializing in AI, Cloud Computing, and Deep Learning. Explore my portfolio showcasing React, Next.js, Node.js, and Python projects.",
-  keywords: ["Full Stack Developer", "AI Engineer", "Cloud Computing", "React", "Next.js", "Python", "Machine Learning"],
+  title: "Sanjay Samala - Software Developer & AI Engineer",
+  description: "Software Developer and AI Engineer specializing in Generative AI, Agentic RAG, Computer Vision, and LLM architectures. Explore my portfolio showcasing Python, LangGraph, and modern AI projects.",
+  keywords: ["Software Developer", "AI Engineer", "Generative AI", "Agentic RAG", "LangGraph", "Python", "Computer Vision", "LLMs"],
   authors: [{ name: "Sanjay Samala" }],
   creator: "Sanjay Samala",
   openGraph: {
     type: "website",
     url: "https://sanjaysamala.dev",
-    title: "Sanjay Samala - Full Stack Developer & AI Engineer",
-    description: "Full Stack Developer specializing in AI, Cloud Computing, and Deep Learning. Explore my portfolio showcasing React, Next.js, Node.js, and Python projects.",
+    title: "Sanjay Samala - Software Developer & AI Engineer",
+    description: "Software Developer and AI Engineer specializing in Generative AI, Agentic RAG, Computer Vision, and LLM architectures. Explore my portfolio showcasing Python, LangGraph, and modern AI projects.",
     siteName: "Sanjay's Portfolio",
     images: [
       {
@@ -35,8 +35,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sanjay Samala - Full Stack Developer & AI Engineer",
-    description: "Full Stack Developer specializing in AI, Cloud Computing, and Deep Learning.",
+    title: "Sanjay Samala - Software Developer & AI Engineer",
+    description: "Software Developer and AI Engineer specializing in Generative AI, Agentic RAG, and Computer Vision.",
     images: ["https://sanjaysamala.dev/profile-img.png"],
   },
 };

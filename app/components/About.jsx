@@ -53,7 +53,7 @@ const About = () => {
           className="flex-1"
         >
           <p className="mb-10 ovo-font max-w-2xl">
-            I am a Full Stack Developer passionate about Deep Learning and Cloud Computing, building scalable applications with React, Next.js, Node.js, and Python. My work focuses on AI integration, exemplified by projects like ZeroWaste AI, a food rescue platform using Google GenAI, and a Conversational Image Chatbot powered by Hugging Face VLMs. I also have experience with digital archiving and cloud technologies through projects like Chandamama Studio, utilizing Qdrant Cloud. I am open to opportunities in Full Stack Development, AI Engineering, and Cloud Architecture.
+            I am a Software Developer and AI Engineer focused on building intelligent, production-ready applications. My work bridges traditional software engineering with generative AI — from designing Agentic RAG architectures with LangGraph and Qdrant Vector DB, to building computer vision pipelines with MediaPipe and XGBoost. Currently working as an AI Developer Intern at Viswam.ai (Swecha Telangana, IIIT Hyd), I'm leading the development of large-scale Telugu language datasets for LLM training and RAG systems. I am open to opportunities in AI Engineering, Generative AI, and Software Development.
           </p>
           <motion.ul
             initial={{ opacity: 0 }}

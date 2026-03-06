@@ -87,33 +87,37 @@ export const assets = {
 
 export const workData = [
   {
-    title: "Chandamama-studio",
+    title: "Telugu Agentic RAG",
     description: "RAG Application",
     imageUrl: "/work-1.png", // using leading slash and correct filename
+    link: "https://telugu-agentic-rag.streamlit.app/",
   },
   {
     title: "Gadulu Gruhalu",
     description: "Web and Mobile App Development",
     imageUrl: "/work-2.png", // updated to work-2.png with leading slash
+    link: "https://gadulu-gruhalu.streamlit.app/",
   },
   {
-    title: "Nutrition Tracker",
+    title: "Nutribot",
     description: "Generative AI",
     imageUrl: "/work-3.png",
+    link: "https://github.com/sanjaysam410/Nutribot",
   },
   {
     title: "Natya Bhoda",
     description: "Machine Learning",
     imageUrl: "/work-4.png",
+    link: "https://github.com/sanjaysam410/NatyaBhoda",
   },
 ];
 
 export const serviceData = [
   {
     icon: assets.web_icon,
-    title: "Machine Learning(Amazon)",
-    description: "Machine Learning involves enabling computers to learn from data and improve their performance over time without being explicitly programmed...",
-    link: "https://github.com/sanjaysam410/Amazon-ML-Hackathon",
+    title: "Telugu Agentic RAG",
+    description: "Agentic RAG architecture using LangGraph with a multi-stage Plan-Draft-Critique-Polish loop, Self-Refining Actor-Critic workflow, and Qdrant Vector DB semantic search for style-grounded retrieval.",
+    link: "https://github.com/sanjaysam410/telugu-agentic-rag",
   },
   {
     icon: assets.mobile_icon,
@@ -142,7 +146,7 @@ export const infoList = [
     iconDark: assets.code_icon_dark,
     title: "Languages",
     description:
-      "C/C++, Python, Java, HTML, CSS, JavaScript, React Js, Next Js, SQL, Streamlit, Flask",
+      "Python, C, JavaScript, SQL, HTML, FastAPI, Flask, React.js, Streamlit, LangGraph, LangChain",
   },
   {
     icon: assets.edu_icon,
@@ -159,8 +163,8 @@ export const infoList = [
   {
     icon: assets.project_icon,
     iconDark: assets.project_icon_dark,
-    title:"Job Profile",
-    description:"Currenly working as an AI Intern at Swecha Foundation",
+    title: "Job Profile",
+    description: "Currenly working as an AI Intern at Swecha Foundation",
   }
 ];
 

@@ -48,6 +48,7 @@ const Work = () => {
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
             key={index}
+            onClick={() => window.open(project.link, '_blank')}
             style={{ backgroundImage: `url('${project.imageUrl}')` }}
             className="relative border rounded-lg overflow-hidden shadow-lg aspect-square bg-no-repeat bg-cover bg-center cursor-pointer group"
           >
