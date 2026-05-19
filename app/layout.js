@@ -1,5 +1,6 @@
 import { Outfit as OutfitFont, Ovo as OvoFont } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 const outfit = OutfitFont({
   subsets: ["latin"],
@@ -46,8 +47,10 @@ export default function RootLayout({ children }) {
     <html lang="en" className="scroll-smooth">
       <body
         className={`${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden`}
+        suppressHydrationWarning
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
