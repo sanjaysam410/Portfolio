@@ -146,25 +146,25 @@ export const infoList = [
     iconDark: assets.code_icon_dark,
     title: "Languages",
     description:
-      "Python, C, JavaScript, SQL, HTML, FastAPI, Flask, React.js, Streamlit, LangGraph, LangChain",
+      "Python, C, JavaScript, SQL, HTML, FastAPI, React.js, Streamlit, PyTorch, Hugging Face, LangGraph, LangChain",
   },
   {
     icon: assets.edu_icon,
     iconDark: assets.edu_icon_dark,
     title: "Education",
-    description: "B.E in Computer Science and Engineering",
+    description: "B.E in Computer Science and Engineering at Matrusri Engineering College",
   },
   {
     icon: assets.project_icon,
     iconDark: assets.project_icon_dark,
     title: "Projects",
-    description: "Built more than 5 projects in multiple domains",
+    description: "Built 5+ production-level projects across AI, GenAI & Full-Stack",
   },
   {
     icon: assets.project_icon,
     iconDark: assets.project_icon_dark,
     title: "Job Profile",
-    description: "Currenly working as an AI Intern at Swecha Foundation",
+    description: "AI Developer Intern at Viswam.ai (Meta × IIIT Hyderabad)",
   }
 ];
 

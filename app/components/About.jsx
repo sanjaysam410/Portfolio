@@ -53,7 +53,7 @@ const About = () => {
           className="flex-1"
         >
           <p className="mb-10 ovo-font max-w-2xl">
-            I am a Software Developer and AI Engineer focused on building intelligent, production-ready applications. My work bridges traditional software engineering with generative AI — from designing Agentic RAG architectures with LangGraph and Qdrant Vector DB, to building computer vision pipelines with MediaPipe and XGBoost. Currently working as an AI Developer Intern at Viswam.ai (Swecha Telangana, IIIT Hyd), I'm leading the development of large-scale Telugu language datasets for LLM training and RAG systems. I am open to opportunities in AI Engineering, Generative AI, and Software Development.
+            AI/ML Engineer passionate about building scalable multilingual AI systems, retrieval-augmented generation pipelines, and low-resource language datasets. As an AI Developer Intern at Viswam.ai — part of the Meta × IIIT Hyderabad Low-Resource Language AI Initiative — I designed metadata extraction pipelines for a Telugu literary corpus of 758 books and 10,000+ stories, and built a Telugu OCR dataset with 120K+ image-text pairs (10.7GB) published on Hugging Face. My flagship project, a Telugu Agentic RAG system, uses a multi-agent Planner → Drafter → Critic loop with GTE Multilingual + Qdrant, achieving 92% Hit Rate @1 and MRR ~0.95. I also serve as Technical Lead and Treasurer of the DevCatalyst Technical Club. Open to opportunities in AI Engineering, Generative AI, and Full-Stack Development.
           </p>
           <motion.ul
             initial={{ opacity: 0 }}
